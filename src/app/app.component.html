@@ -1,0 +1,28 @@
+<div class="container">
+ 
+ <h1 class="text-center"> Cursos de Programação </h1>
+<div class="card p-0 m-6">
+ <div class="card-header text-center">
+   Curso
+ </div>
+ <div class="card-body">
+   <p class="card-text text-center ">Angular</p>
+   <div class="card-text text-center">carga horaria: 54h </div>
+  </div>
+</div>
+
+ <div class="m-4">
+ <p>Cadastre um curso de programação nos campos abaixo </p>
+ </div>
+ <!--botão que, quando clicado, faz a inserção de dados na lista-->
+  <app-exibe-curso (cursoAdicionado)="onAdicionarCurso($event)"></app-exibe-curso>
+
+   <div class="row  p-3">
+    <div class="col-4" *ngFor="let curso of cursos">
+    <app-curso-cartao [curso]="curso"></app-curso-cartao>
+    </div>
+   </div>
+ </div>
+ 
+
+ 
